@@ -16,9 +16,9 @@ blocks:
             - 'export PATH=/home/semaphore/go/bin:$PATH'
             - checkout
             - cd src
-            - '''cache restore vendor-$SEMAPHORE_GIT_BRANCH'
+            - '''cache restore vendor-$SEMAPHORE_GIT_BRANCH'''
             - go mod vendor
-            - '''cache store vendor-$SEMAPHORE_GIT_BRANCH-$'
+            - '''cache store vendor-$SEMAPHORE_GIT_BRANCH-$'''
             - go get ./...
             - go test ./...
             - go build -v .
